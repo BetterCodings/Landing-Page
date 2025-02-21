@@ -1,27 +1,48 @@
 div, input, textarea {
-  box-sizing : border-box;
+    box-sizing : border-box;
 }
 
 body, p{
-  margin: 0;
+    margin: 0;
 }
 
 html {
-  line-height : 1.15; /*기본 행간 높이*/
+    line-height : 1.15; /*기본 행간 높이*/
 }
 
 .white{
     color: white;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.margin {
+    margin-top: 30px;
+}
+
 .top {
     height: 400px;
     background-image: linear-gradient(to bottom, #4996DC 0%, #4E60C0 100%);
+    display: flex;
+    padding: 60px 24%;
     position: relative;
 }
 
-.ipone > img{
+.iphone {
+    position: absolute;
+    left: 58%;
+    top: 72px;
+}
+
+.iphone > img{
     width: 301px;
+}
+
+
+.top-left {
+    
 }
 
 .top-left>h2 {
@@ -32,19 +53,21 @@ html {
     margin: 0;
 }
 
-.ipone {
-    position: absolute;
-    top: 18%;
-    left: 60%;
-}
-
 .button {
     font-size: 15px;
     background-color: dimgray;
     border: none;
     border-radius: 3px;
     margin-top : 15px;
-    padding: 10px;
+    padding: 15px 20px 15px 20px;
+}
+
+.button:hover{
+    background-color: chocolate;
+}
+
+.button:active{
+    background-color: brown;
 }
 
 .top-wrap {
@@ -54,11 +77,6 @@ html {
     display : block;
     margin-left : auto;
     margin-right : auto;
-}
-
-.top-left {
-    padding-top: 60px;
-    padding-left: 24%;
 }
 
 .portfolio {
@@ -97,29 +115,15 @@ html {
     justify-content: center;
 }
 
-.bold {
-    font-weight: bold;
-}
-
 .icon-title {
     margin-top: 8px;
     margin-bottom: 8px;
     font-size: 20px;
 }
 
-.margin {
-    margin-top: 30px;
-}
-
 .img-container {
     display:flex;
     justify-content: center;
-}
-
-
-
-.portfolio-img {
-    
 }
 
 .img-shape {
@@ -195,4 +199,45 @@ a:visited{
 
 .services-icon {
     padding: 30px;
+}
+
+@media screen and (max-width : 1200px) { 
+    .top {
+        padding-left: 15%;
+    }
+    .img-background {
+        width: 40%;
+        height: 300px;
+        background-size: cover;
+        padding: 50px; 
+        text-align: left;
+    }
+} 
+
+@media screen and (max-width : 768px) { 
+    .top{
+        height: 570px;
+        padding: 60px 0px;
+    }
+    .top-left {
+        text-align: center;
+        width: 100%;
+    }
+    .top-left>h2{
+        font-size: 30px;
+    }
+    .iphone {
+        top: 242px;
+        left: 30%;
+    }
+    .img-background {
+        width: 47%;
+        height: 200px;
+        background-size: cover;
+        padding: 50px; 
+        text-align: left;
+    }
+    .profile_link{
+        margin-top: 40px;
+    }
 }
